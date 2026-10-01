@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Bookmark Wizard",
+    "description": "Name der Erweiterung"
+  },
+  "appDescription": {
+    "message": "Lokaler Bookmark-Manager mit Suche, Drag & Drop, Cleanup, Deadlink-Check, Rename, Sortierung und Backup.",
+    "description": "Kurzbeschreibung fuer den Chrome Web Store, maximal 132 Zeichen"
+  },
+  "commandOpen": {
+    "message": "Bookmark Wizard oeffnen",
+    "description": "Beschreibung des Tastenkurzbefehls"
+  },
+  "contextQuickImport": {
+    "message": "Bulk import",
+    "description": "Kontextmenue-Aktion"
+  },
+  "contextSaveThisPage": {
+    "message": "Save this page",
+    "description": "Kontextmenue-Aktion"
+  },
+  "contextSearch": {
+    "message": "Search",
+    "description": "Kontextmenue-Aktion"
+  }
+}
