@@ -36,6 +36,7 @@ export const BookmarkImportPanel = ({ folders, roots, defaultFolderId, compact, 
   const [smartNamingEnabled, setSmartNamingEnabled] = useState(false);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<string>();
+  const selectedFolder = folders.find((folder) => folder.id === folderId);
   const rawParsed = parseBookmarkImportText(text);
   const smartTitleSuggestions = Object.fromEntries(analyzeRename(rawParsed.map((bookmark, index) => ({
     id: `import:${index}`,
@@ -51,7 +52,6 @@ export const BookmarkImportPanel = ({ folders, roots, defaultFolderId, compact, 
     ...bookmark,
     title: editedTitles[bookmark.url] ?? (smartNamingEnabled ? smartTitleSuggestions[bookmark.url] : undefined) ?? titleSuggestions[bookmark.url] ?? bookmark.title
   }));
-  const selectedFolder = folders.find((folder) => folder.id === folderId);
   const pathFolders = (selectedFolder?.pathTitles ?? [])
     .map((title, index, pathTitles) => folders.find((folder) => folder.title === title && folder.pathTitles.length === index + 1 && pathTitles.slice(0, index + 1).join(" / ") === folder.path))
     .filter((folder): folder is FlatBookmarkNode => Boolean(folder));
