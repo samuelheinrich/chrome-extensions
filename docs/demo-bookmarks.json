@@ -1,0 +1,53 @@
+{
+  "app": "Bookmark Wizard",
+  "version": 1,
+  "exportedAt": "2026-10-01T12:00:00.000Z",
+  "roots": [{
+    "id": "0", "title": "", "children": [{
+      "id": "1", "parentId": "0", "title": "Bookmarks bar", "children": [{
+        "id": "10", "parentId": "1", "title": "Demo Bookmarks", "children": [
+          {"id": "20", "parentId": "10", "title": "Networking", "children": [
+            {"id": "21", "parentId": "20", "title": "Wireless planning guide", "url": "https://network.example/guides/wireless-planning"},
+            {"id": "22", "parentId": "20", "title": "VLAN design handbook", "url": "https://network.example/docs/vlan-design"},
+            {"id": "23", "parentId": "20", "title": "DNS troubleshooting checklist", "url": "https://network.example/tools/dns-checklist"},
+            {"id": "24", "parentId": "20", "title": "Switch configuration lab", "url": "https://lab.example/network/switching"},
+            {"id": "25", "parentId": "20", "title": "Retired wireless manual", "url": "https://archive.example/wireless/old-manual"},
+            {"id": "26", "parentId": "20", "title": "Remote router lab", "url": "https://slow.example/network/router-lab"},
+            {"id": "27", "parentId": "20", "title": "Wireless guide (duplicate)", "url": "https://network.example/guides/wireless-planning"}
+          ]},
+          {"id": "30", "parentId": "10", "title": "Security", "children": [
+            {"id": "31", "parentId": "30", "title": "VPN deployment guide", "url": "https://security.example/guides/vpn-deployment"},
+            {"id": "32", "parentId": "30", "title": "SSO architecture notes", "url": "https://identity.example/docs/sso-architecture"},
+            {"id": "33", "parentId": "30", "title": "Firewall policy checklist", "url": "https://security.example/docs/firewall-policy"}
+          ]},
+          {"id": "40", "parentId": "10", "title": "Cloud", "children": [
+            {"id": "41", "parentId": "40", "title": "Kubernetes starter lab", "url": "https://cloud.example/labs/kubernetes-starter"},
+            {"id": "42", "parentId": "40", "title": "Terraform module patterns", "url": "https://cloud.example/docs/terraform-modules"},
+            {"id": "43", "parentId": "40", "title": "Docker deployment notes", "url": "https://cloud.example/docs/docker-deployment"}
+          ]},
+          {"id": "50", "parentId": "10", "title": "Development", "children": [
+            {"id": "51", "parentId": "50", "title": "React component cookbook", "url": "https://dev.example/docs/react-components"},
+            {"id": "52", "parentId": "50", "title": "TypeScript reference", "url": "https://dev.example/reference/typescript"},
+            {"id": "53", "parentId": "50", "title": "API testing toolbox", "url": "https://dev.example/tools/api-testing"}
+          ]},
+          {"id": "60", "parentId": "10", "title": "Reading", "children": [
+            {"id": "61", "parentId": "60", "title": "Design systems field guide", "url": "https://reading.example/design/systems"},
+            {"id": "62", "parentId": "60", "title": "Weekend hiking routes", "url": "https://outdoors.example/trails/weekend"}
+          ]},
+          {"id": "70", "parentId": "10", "title": "Deleted", "children": []},
+          {"id": "11", "parentId": "10", "title": "Team knowledge hub", "url": "https://team.example/knowledge/start"},
+          {"id": "12", "parentId": "10", "title": "Project planning board", "url": "https://planning.example/projects/demo"},
+          {"id": "13", "parentId": "10", "title": "Network tools directory", "url": "https://tools.example/network/calculators"}
+        ]
+      }]
+    }]
+  }],
+  "tags": {
+    "11": ["docs", "team"], "12": ["planning", "team"], "13": ["networking", "tools"],
+    "21": ["docs", "wireless"], "22": ["docs", "networking"], "23": ["networking", "tools"],
+    "24": ["lab", "networking"], "25": ["archive", "wireless"], "26": ["lab", "networking"], "27": ["docs", "wireless"],
+    "31": ["docs", "security", "vpn"], "32": ["security", "sso"], "33": ["docs", "security"],
+    "41": ["cloud", "kubernetes", "lab"], "42": ["cloud", "docs", "terraform"], "43": ["cloud", "docker"],
+    "51": ["dev", "react"], "52": ["dev", "docs"], "53": ["dev", "tools"], "61": ["design"], "62": ["reading"]
+  }
+}
