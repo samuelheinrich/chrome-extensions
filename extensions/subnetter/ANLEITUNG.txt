@@ -1,0 +1,62 @@
+SUBNETTER TOOLS 1.1.0 – INSTALLATION IN GOOGLE CHROME
+
+1. ZIP-Datei vollständig entpacken:
+   Windows: Rechtsklick auf die ZIP-Datei > Alle extrahieren.
+   macOS: Doppelklick auf die ZIP-Datei.
+
+2. Den entpackten Ordner subnetter-tools-1.1.0 an einen dauerhaften Ort
+   verschieben, zum Beispiel Dokumente/Chrome-Erweiterungen.
+   Dieser Ordner enthält manifest.json, popup.html und den Ordner icons.
+   Den Ordner nach der Installation nicht löschen oder verschieben:
+   Chrome lädt die Erweiterung direkt aus diesem Ordner.
+
+3. In Google Chrome chrome://extensions in die Adresszeile eingeben.
+
+4. Oben rechts den Entwicklermodus (Developer mode) einschalten.
+
+5. „Entpackte Erweiterung laden“ (Load unpacked) anklicken und den
+   Ordner subnetter-tools-1.1.0 auswählen, in dem manifest.json liegt.
+   Die ZIP-Datei selbst kann hier nicht ausgewählt werden.
+
+6. Rechts oben in Chrome auf das Puzzle-Symbol klicken und
+   „Subnetter Tools“ über die Stecknadel an die Symbolleiste anheften.
+   Anschliessend auf das Symbol klicken und Subnetter oder MAC Converter
+   auswählen.
+
+KURZER FUNKTIONSCHECK
+Im Subnetter „192.168.1.10/24“ eingeben.
+Erwartet: Netzwerk 192.168.1.0/24, Broadcast 192.168.1.255,
+254 nutzbare Host-Adressen.
+Im MAC Converter zum Beispiel „aabb.ccdd.eeff“ eingeben.
+Die verschiedenen MAC-Schreibweisen erscheinen automatisch.
+
+BERECHTIGUNGEN
+Die Erweiterung speichert letzte Eingaben und Einstellungen lokal.
+Sie darf die Zwischenablage lesen, um gültige MAC-Adressen automatisch
+zu übernehmen. Die Herstellerdatenbank ist im Paket enthalten.
+
+AKTUALISIEREN ODER ENTFERNEN
+Für ein Update die Dateien im gleichen Installationsordner ersetzen und
+unter chrome://extensions bei Subnetter Tools auf „Neu laden“ klicken.
+Zum Deinstallieren dort „Entfernen“ anklicken.
+
+WENN DIE INSTALLATION NICHT KLAPPT
+Bei „Manifest fehlt“ prüfen, ob die ZIP vollständig entpackt wurde und
+wirklich der Ordner mit manifest.json ausgewählt wurde.
+Falls der Firmenbrowser den Entwicklermodus oder lokale Erweiterungen
+sperrt, muss die IT die Installation freigeben.
+
+ZUM WEITERSCHICKEN
+Nur subnetter-tools-1.1.0.zip verschicken; alle benötigten Dateien
+und diese Anleitung sind enthalten. Es sind weder Node.js noch npm nötig.
+
+Nachricht zum Kopieren:
+„Hier ist Subnetter Tools als Chrome-Erweiterung. Bitte die ZIP entpacken
+und die beiliegende ANLEITUNG.txt befolgen. Installation: chrome://extensions
+öffnen, Entwicklermodus einschalten und den entpackten Ordner mit
+manifest.json über 'Entpackte Erweiterung laden' auswählen.“
+
+Offizielle Chrome-Installationsanleitung:
+https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked
+
+Kontakt: info@samuel-heinrich.ch

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Subnetter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="app-header">
+    <img src="icons/icon32.png" alt="" width="20" height="20">
+    <h1>Subnetter</h1>
+    <button id="backToChooser" class="btn small" title="Choose another tool" hidden>Tools</button>
+    <label class="toggle" title="Show binary representation">
+      <input type="checkbox" id="advancedToggle">
+      <span>Advanced</span>
+    </label>
+    <button id="openTab" class="btn small" title="Open Subnetter in a full browser tab">Open in tab ⧉</button>
+  </header>
+
+  <section id="toolChooser" class="tool-chooser">
+    <button id="chooseSubnetter" class="tool-card" type="button">
+      <strong>Subnetter</strong>
+      <span>IPv4 calculator, subnet splitting and CSV export</span>
+    </button>
+    <button id="chooseMacConverter" class="tool-card" type="button">
+      <strong>MAC Converter</strong>
+      <span>Normalize MAC addresses into common formats</span>
+    </button>
+  </section>
+
+  <main id="subnetterTool" hidden>
+    <section class="input-row">
+      <input type="text" id="ipInput" spellcheck="false" autocomplete="off"
+             placeholder="10.1.1.0/24  or  10.1.1.0 255.255.255.0">
+      <button id="prefixMinus" class="btn stepper" title="Shorter prefix — bigger network">&minus;</button>
+      <button id="prefixPlus" class="btn stepper" title="Longer prefix — smaller network">+</button>
+      <button id="specialRangesToggle" class="btn" title="Show special IPv4 ranges">Special ranges</button>
+    </section>
+    <p id="errorMsg" class="error" hidden></p>
+
+    <section id="specialRangesCard" class="card" hidden>
+      <div class="card-header">
+        <span class="card-title">Special IPv4 ranges</span>
+        <button id="copySpecialRanges" class="btn small" title="Copy all special ranges">Copy all</button>
+      </div>
+      <div id="specialRangesBody" class="special-ranges"></div>
+    </section>
+
+    <section id="resultCard" class="card" hidden>
+      <div class="card-header">
+        <span class="card-title">Result</span>
+        <button id="copyAll" class="btn small" title="Copy the whole block as text">Copy all</button>
+        <button id="exportResultCsv" class="btn small" title="Export this result as CSV">CSV</button>
+      </div>
+      <div id="resultRows" class="rows"></div>
+      <div id="bitBar" class="bitbar-wrap" hidden>
+        <div class="bitbar" id="bitBarSegments"></div>
+        <div class="bitbar-legend">
+          <span><i class="dot net"></i>Network bits</span>
+          <span><i class="dot host"></i>Host bits</span>
+          <span id="bitBarLabel"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="splitCard" class="card" hidden>
+      <div class="card-header">
+        <span class="card-title">Split subnet</span>
+        <label class="split-label">into&nbsp;/<select id="splitPrefix"></select></label>
+        <span id="splitCount" class="split-count"></span>
+        <label class="toggle" title="Show every host address per subnet as a table">
+          <input type="checkbox" id="showHosts">
+          <span>Show hosts</span>
+        </label>
+        <button id="copyList" class="btn small" title="Copy all CIDRs, one per line">Copy list</button>
+        <button id="exportSplitCsv" class="btn small" title="Export all subnets as CSV">CSV</button>
+      </div>
+      <p id="splitWarning" class="error" hidden></p>
+      <div id="splitList" class="split-list"></div>
+    </section>
+  </main>
+
+  <main id="macTool" hidden>
+    <section class="input-row">
+      <input type="text" id="macInput" spellcheck="false" autocomplete="off"
+             placeholder="aa:bb:cc:dd:ee:ff  or  aabb.ccdd.eeff">
+    </section>
+    <p id="macErrorMsg" class="error" hidden></p>
+
+    <section id="macResultCard" class="card" hidden>
+      <div class="card-header">
+        <span class="card-title">MAC formats</span>
+        <button id="copyAllMacFormats" class="btn small" title="Copy all MAC formats, one per line">Copy all formats</button>
+      </div>
+      <div id="macRows" class="mac-rows"></div>
+      <div id="macVendorInfo" class="mac-vendor" hidden></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <span>Subnetter — IPv4 subnet calculator</span>
+    <a href="mailto:info@samuel-heinrich.ch">info@samuel-heinrich.ch</a>
+  </footer>
+
+  <script src="ipcalc.js"></script>
+  <script src="oui-vendors.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
